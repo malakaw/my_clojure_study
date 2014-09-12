@@ -21,6 +21,26 @@ mvn install:install-file -Dfile=XXX.jar -DgroupId=com.x.xx  -DartifactId=DFXXXX 
 </code></pre>
 
 
+## lein  ##
+1)查看依赖库的tree
+<pre><code>
+lein deps :tree
+</code></pre>
+
+2)导出依赖的jar文件到lib目录
+<br/>可以使用插件lein-libdir
+<br/>添加下面代码到project.clj
+<pre><code>
+(defproject myproject "0.1.0-SNAPSHOT"
+  :plugins [[lein-libdir "0.1.1"]]
+  :libdir-path "lib")
+
+</code></pre>
+copy jar文件
+<pre><code>
+$ lein libdir
+</code></pre>
+
 ## 遇到的错误和问题 ##
 ### 使用emacs ###
 1) inferior-lisp-proc: No Lisp subprocess; see variable `inferior-lisp-buffer'
