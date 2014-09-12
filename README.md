@@ -29,6 +29,7 @@ lein deps :tree
 
 2)导出依赖的jar文件到lib目录
 <br/>可以使用插件lein-libdir
+[https://github.com/djpowell/lein-libdir](https://github.com/djpowell/lein-libdir)
 <br/>添加下面代码到project.clj
 <pre><code>
 (defproject myproject "0.1.0-SNAPSHOT"
