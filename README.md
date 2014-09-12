@@ -47,3 +47,8 @@ $ lein libdir
 1) inferior-lisp-proc: No Lisp subprocess; see variable `inferior-lisp-buffer'
 代码是没有问题的，那么怎么解决呢？
 M-x nrepl-enable-on-existing-buffers should fix it.
+
+
+## 有待解决的的问题 ##
+1）在emacs live中没有一个 变量在多文件中的替换，查找可以用 Helm<br/>
+2) 没有像是代码行对应的todo list (类似eclipse中  tasks )
