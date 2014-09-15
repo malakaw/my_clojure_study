@@ -1,22 +1,10 @@
 # 学习clojure笔记 #
 
 ## coll数据结构 ##
-<table>
-    <tbody>
-        <tr>
-            <td>key</td>
-            <td>key</td>
-            <td>key</td>
-            <td>key</td>
-        </tr>
-        <tr>
-            <td>value</td>
-            <td>value</td>
-            <td>value</td>
-            <td>value</td>
-        </tr>
-    </tbody>
-</table>
+1)map 的merge-with
+2)...
+
+
 
 ### 如何导入本地的jar文件 ###
 首先你必须安装maven,然后你把你的工程（需要被导入到clojure）mvn install.最后加入此开发包到clojure的peoject.clj文件中。
