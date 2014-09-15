@@ -25,7 +25,33 @@ user=> (merge-with union
 {:c #{1 2 3}, :a #{1 2 3 7 8}, :b #{4 5 6}}
 </code></pre>
 
-2)...
+2)clojure的set /list/map..转换成java 的set/list/map ☆</br/>
+<pre><code>
+[] to a java.util.ArrayList
+{} to a java.util.HashMap
+#{} to a java.util.HashSet
+() to a java.util.LinkedList
+
+user=> (java.util.ArrayList. [1 2 3])
+#<ArrayList [1, 2, 3]>
+user=> (.get (java.util.ArrayList. [1 2 3]) 0)
+1
+
+user=> (java.util.HashMap. {"a" 1 "b" 2})
+#<HashMap {b=2, a=1}>
+user=> (.get (java.util.HashMap. {"a" 1 "b" 2}) "a")
+1
+
+ser=> (into [] (java.util.ArrayList. [1 2 3]))
+[1 2 3]
+user=> (into #{} (java.util.HashSet. #{1 2 3}))
+#{1 2 3}
+user=> (into '() (java.util.LinkedList. '(1 2 3)))
+(3 2 1)
+user=> (into {} (java.util.HashMap. {:a 1 :b 2}))
+{:b 2, :a 1}
+</code></pre>
+
 
 
 
