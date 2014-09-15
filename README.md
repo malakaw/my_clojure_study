@@ -1,7 +1,30 @@
 # 学习clojure笔记 #
 
 ## coll数据结构 ##
-1)map 的merge-with
+1)map 的merge-with ★<br/>
+这个是针对某种比较常见的需求的解决办法，就是一个map的value是set,然后需要进行“累加”set ;直接上代码吧。
+<pre><code>
+user=> (merge-with concat
+          {"Lisp" ["Common Lisp" "Clojure"]           "ML" ["Caml" "Objective Caml"]}
+          {"Lisp" ["Scheme"]           "ML" ["Standard ML"]})
+
+ {"Lisp" ("Common Lisp" "Clojure" "Scheme"), "ML" ("Caml" "Objective Caml" "Standard ML")}
+
+
+ user=> (merge-with +
+                   {:a 1  :b 2}
+                   {:a 9  :b 98 :c 0})
+
+{:c 0, :a 10, :b 100}
+
+user=> (use 'clojure.set)
+user=> (merge-with union
+                   {:a #{1 2 3},   :b #{4 5 6}}
+                   {:a #{2 3 7 8}, :c #{1 2 3}})
+
+{:c #{1 2 3}, :a #{1 2 3 7 8}, :b #{4 5 6}}
+</code></pre>
+
 2)...
 
 
