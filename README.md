@@ -52,7 +52,8 @@ user=> (into {} (java.util.HashMap. {:a 1 :b 2}))
 {:b 2, :a 1}
 </code></pre>
 
-
+3) contains?的坑<br/>
+contains对于map /set 是我们理解的那个contains，但是vector不是的，他只是存在下标否，真蛋疼，不注意容易被莫名好久。
 
 
 ### 如何导入本地的jar文件 ###
