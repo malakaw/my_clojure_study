@@ -1,7 +1,22 @@
 # 学习clojure笔记 #
 
-##使用emacs开发clojure  ##
-
+## coll数据结构 ##
+<table>
+    <tbody>
+        <tr>
+            <td>key</td>
+            <td>key</td>
+            <td>key</td>
+            <td>key</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>value</td>
+            <td>value</td>
+            <td>value</td>
+        </tr>
+    </tbody>
+</table>
 
 ### 如何导入本地的jar文件 ###
 首先你必须安装maven,然后你把你的工程（需要被导入到clojure）mvn install.最后加入此开发包到clojure的peoject.clj文件中。
@@ -17,7 +32,6 @@ mvn install:install-file -Dfile=XXX.jar -DgroupId=com.x.xx  -DartifactId=DFXXXX 
 			[org.clojure/clojure "1.5.1"]
 			[com.x.xx/DFXXXX "0.0.1"]
 		]
-
 </code></pre>
 
 
@@ -51,4 +65,4 @@ M-x nrepl-enable-on-existing-buffers should fix it.
 
 ## 有待解决的的问题 ##
 1）在emacs live中没有一个 变量在多文件中的替换，查找可以用 Helm<br/>
-2) 没有像是代码行对应的todo list (类似eclipse中  tasks )
+2) 没有像是代码行对应的todo list (类似eclipse中  tasks ),似乎helm就可以搞定。。。。。但是不是整个project 的，是所有打开的buffer中。自己写elisp??
