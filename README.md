@@ -55,6 +55,16 @@ user=> (into {} (java.util.HashMap. {:a 1 :b 2}))
 3) contains?的坑<br/>
 contains对于map /set 是我们理解的那个contains，但是vector不是的，他只是存在下标否，真蛋疼，不注意容易被莫名好久。
 
+## 宏 ##
+不说废话，直接看代码
+<pre><code>
+(defmacro debug [x]
+  `(+ 1 ~x (+ 9 ~x) ~'y)
+  )
+(let [y 9] (debug 3))
+返回： 25
+</code></pre>
+
 
 ### 如何导入本地的jar文件 ###
 首先你必须安装maven,然后你把你的工程（需要被导入到clojure）mvn install.最后加入此开发包到clojure的peoject.clj文件中。
@@ -71,6 +81,28 @@ mvn install:install-file -Dfile=XXX.jar -DgroupId=com.x.xx  -DartifactId=DFXXXX 
 			[com.x.xx/DFXXXX "0.0.1"]
 		]
 </code></pre>
+<table>
+ <tr>
+   <td>`</td>
+   <td>使用就会原原本本地直译过去，不用`,let语句不被翻译</td>
+ </tr>
+  <tr>
+   <td></td>
+   <td></td>
+ </tr>
+  <tr>
+   <td></td>
+   <td></td>
+ </tr>
+  <tr>
+   <td></td>
+   <td></td>
+ </tr>
+  <tr>
+   <td></td>
+   <td></td>
+ </tr>
+</table>
 
 
 ## lein  ##
