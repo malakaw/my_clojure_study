@@ -64,7 +64,28 @@ contains对于map /set 是我们理解的那个contains，但是vector不是的�
 (let [y 9] (debug 3))
 返回： 25
 </code></pre>
-
+<table>
+ <tr>
+   <td>`</td>
+   <td>使用就会原原本本地直译过去，不用`,let语句不被翻译</td>
+ </tr>
+  <tr>
+   <td>~'</td>
+   <td>使用则后面的变量被直接翻译过去，否则翻译成user/dbname等</td>
+ </tr>
+  <tr>
+   <td>~@</td>
+   <td>表示多条语句</td>
+ </tr>
+  <tr>
+   <td>'~</td>
+   <td>变量名本身而非值</td>
+ </tr>
+  <tr>
+   <td>~</td>
+   <td>不求值，先替换的参数</td>
+ </tr>
+</table>
 
 ### 如何导入本地的jar文件 ###
 首先你必须安装maven,然后你把你的工程（需要被导入到clojure）mvn install.最后加入此开发包到clojure的peoject.clj文件中。
@@ -81,28 +102,7 @@ mvn install:install-file -Dfile=XXX.jar -DgroupId=com.x.xx  -DartifactId=DFXXXX 
 			[com.x.xx/DFXXXX "0.0.1"]
 		]
 </code></pre>
-<table>
- <tr>
-   <td>`</td>
-   <td>使用就会原原本本地直译过去，不用`,let语句不被翻译</td>
- </tr>
-  <tr>
-   <td></td>
-   <td></td>
- </tr>
-  <tr>
-   <td></td>
-   <td></td>
- </tr>
-  <tr>
-   <td></td>
-   <td></td>
- </tr>
-  <tr>
-   <td></td>
-   <td></td>
- </tr>
-</table>
+
 
 
 ## lein  ##
