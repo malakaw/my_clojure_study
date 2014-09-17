@@ -55,8 +55,8 @@ user=> (into {} (java.util.HashMap. {:a 1 :b 2}))
 3) contains?的坑<br/>
 contains对于map /set 是我们理解的那个contains，但是vector不是的，他只是存在下标否，真蛋疼，不注意容易被莫名好久。
 
-## ★宏 ##
-不说废话，直接看代码
+## 宏 ##
+不说废话，直接看代码☺
 <pre><code>
 (defmacro debug [x]
   `(+ 1 ~x (+ 9 ~x) ~'y)
