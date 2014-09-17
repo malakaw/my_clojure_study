@@ -98,7 +98,7 @@ $ lein libdir
 <b>使用的是emacs live [https://github.com/overtone/emacs-live](https://github.com/overtone/emacs-live)</b><br/>
 在使用的时候经常会对于一个def or defn定义后，跳转到nrepl测试，我定义了一个快捷键，很方便，二合一。
 <pre><code>
-(global-set-key (kbd "<f6>")
+(global-set-key (kbd "&glt;f6")
     (lambda ()
       (interactive)
       (nrepl-eval-last-expression nil)
