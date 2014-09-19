@@ -137,6 +137,10 @@ $ lein libdir
       (other-window 1)))
 </code></pre>
 
+在写lisp代码的时候最麻烦的是刮号 “（”, 特别是在需要删除的时候，你要光标选中，其实有更简单的办法。
+删除刮号内的内容，不管刮号内是多少行，先把光标定位的刮号开始位置，"C-k"就可以删除。还有"M-k",他的作用是删除光标所在位置到parent刮号开始位置（有点饶口，自己理解）。
+
+
 ## 遇到的错误和问题 ##
 ### 使用emacs ###
 1) inferior-lisp-proc: No Lisp subprocess; see variable `inferior-lisp-buffer'
