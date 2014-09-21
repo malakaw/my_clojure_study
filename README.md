@@ -87,7 +87,12 @@ contains对于map /set 是我们理解的那个contains，但是vector不是的�
  </tr>
 </table>
 
-### 如何导入本地的jar文件 ###
+
+
+
+
+
+### 如何导入本地jar文件 ###
 首先你必须安装maven,然后你把你的工程（需要被导入到clojure）mvn install.最后加入此开发包到clojure的peoject.clj文件中。
 <br/>**mvn install**
 <pre><code>
@@ -111,7 +116,14 @@ mvn install:install-file -Dfile=XXX.jar -DgroupId=com.x.xx  -DartifactId=DFXXXX 
 lein deps :tree
 </code></pre>
 
-2)导出依赖的jar文件到lib目录
+2)列出你依赖的包的最新版本<br/>
+有时候你需要这种功能的，使用lein-ancient<br/>
+
+3)代码质量控制工具 <br/>
+有时候我们会写一些不合理的代码，或许你没留意到，或许你一直认为那是很“合理”的写法；但是有这么一个工具告诉你应该这么写代码，不是人，是工具（他不会鄙视你），你可以悄悄的接受他的建议优化代码。 他们是： kibit / Eastwood
+<br/>
+
+4)导出依赖的jar文件到lib目录
 <br/>可以使用插件lein-libdir
 [https://github.com/djpowell/lein-libdir](https://github.com/djpowell/lein-libdir)
 <br/>添加下面代码到project.clj
