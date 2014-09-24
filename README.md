@@ -64,31 +64,52 @@ contains对于map /set 是我们理解的那个contains，但是vector不是的�
 (let [y 9] (debug 3))
 返回： 25
 </code></pre>
-<table>
- <tr>
-   <td>`</td>
-   <td>使用就会原原本本地直译过去，不用`,let语句不被翻译</td>
- </tr>
-  <tr>
-   <td>~'</td>
-   <td>使用则后面的变量被直接翻译过去，否则翻译成user/dbname等</td>
- </tr>
-  <tr>
-   <td>~@</td>
-   <td>表示多条语句</td>
- </tr>
-  <tr>
-   <td>'~</td>
-   <td>变量名本身而非值</td>
- </tr>
-  <tr>
-   <td>~</td>
-   <td>不求值，先替换的参数</td>
- </tr>
-</table>
+
+## clojure的 quote  `' 符号 ##
+自己的理解，通俗点，容易记住
+clojure 有很多的符号，让像我这种java程序员很莫名，首先还是说下quote,这分两种
+一种是  ' ，另外一个是 ｀ ，看上去差不多，其实功能也差不多。
+
+1） ' <br/>
+这个的功能就是，任何出现此符号的地方，'后的刮号内的东西就是理解为原封不动传给jvm. 当作整个是脚本。
+<br/>
+2)  `<br/>
+这个其实也和'差不多，也是把出现此符号后面 刮号内的东西 原封不动传给jvm，但是，是的肯定是有但是的（你预料到了 ☺）, 这个 原封不动的东西里面我们还是可以再做点小动作 ，当我们对于 原封不动的脚本内 需要运算一些东西，那么就加上 ～<br/>
+<pre><code>
+user=> `(+ 1 (* 2 3))
+(clojure.core/+ 1 (clojure.core/* 2 3))
+user=> `(+ 1 ~(* 2 3))
+(clojure.core/+ 1 6)
+user=> (let [x 2] `(1 ~x 3))
+(1 2 3)
+</code></pre>
 
 
 
+那我们java 程序员很纳闷了，clojure  干嘛那么费劲搞这么一出呢，多麻烦啊。其实clojure有鞋情况不得不使用他们，我们知道“( ”后的第一个元素一般是函数或是宏来计算的，但是如果我只是表述一个 list ,something like (1 2 3 4),那么整数1肯定是不能被当作函数或是宏的，这个时候就需要 ' 或是`了。看个列子
+<pre><code>
+user=> (cons 1 (1 2))
+ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  user/eval677 (NO_SOURCE_FILE:1)
+user=> (cons 1 '(1 2 3))
+(1 1 2 3)
+user=> (cons 1 `(1 2 3))
+(1 1 2 3)
+</code></pre>
+
+所以说类似这种情况下我们需要 ` '.
+<br/>
+<b>补充说明下～@ ，这个～@的意思是先运算， 然后运算出来的结果拼装到前面的 list中，理解这个，你可以想像下concat;</b>
+
+
+## vector  ##
+可以理解为栈
+ 优点
+在集合的最右边删除或是添加操作速度很快
+使用下标位置访问数据或是修改数据速度快
+反向遍历
+
+
+备注：建议使用 conj (类似push) /pop /peek, 这几个最高效
 
 
 
