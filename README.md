@@ -187,16 +187,16 @@ $ lein libdir
 <td>C-M-p</td><td>这个和C-M-n相反 ，一直到最里层</td>
 </tr>
 <tr>
-<td>C-M-f</td><td>标注前面的兄弟form</td>
+<td>C-M-f</td><td>标注出前面的兄弟form</td>
 </tr>
 <tr>
-<td>C-M-b</td><td>标注后面的兄弟form</td>
+<td>C-M-b</td><td>标注出后面的兄弟form</td>
 </tr>
 <tr>
-<td>C-M-d</td><td>移动到下一个form的（</td>
+<td>C-M-d</td><td>标注到下一个form的（</td>
 </tr>
 <tr>
-<td>C-M-a</td><td>移动到最外层form</td>
+<td>C-M-a</td><td>标注到最外层form</td>
 </tr>
 
 </table>
