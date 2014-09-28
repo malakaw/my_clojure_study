@@ -1,5 +1,7 @@
 # 学习clojure笔记 #
 
+
+[snacks](https://github.com/malakaw/my_clojure_study/blob/master/snacks.md)
 ## coll数据结构 ##
 1)map 的merge-with ★<br/>
 这个是针对某种比较常见的需求的解决办法，就是一个map的value是set,然后需要进行“累加”set ;直接上代码吧。
