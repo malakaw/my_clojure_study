@@ -1,7 +1,7 @@
 # 学习clojure笔记 #
 
 
-[snacks](https://github.com/malakaw/my_clojure_study/blob/master/snacks.md)
+[使用小列子，snacks](https://github.com/malakaw/my_clojure_study/blob/master/snacks.md)
 
 ## 宏 ##
 不说废话，直接看代码☺
