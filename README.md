@@ -131,30 +131,30 @@ $ lein libdir
 <tr>
 <td>C-k-y</td><td>复制当前刮号内的东西</td>
 </tr>
+<tr>
+<td>C-Alt-a</td><td>(☺这个经常使用)标注到最外层form</td>
+</tr>
+
+<tr>
+<td>C-Alt-n</td><td>(☺这个经常使用) 光标标注当前form(可以理解为刮号),再按，会再标注外层的form,一直到最外层, 记法 ：No money ,get out.</td>
+</tr>
+
+<tr>
+<td>C-Alt-p</td><td>这个和C-M-n相反 ，一直到最里层</td>
+</tr>
+<tr>
+<td>C-Alt-f</td><td>标注出前面的兄弟form</td>
+</tr>
+<tr>
+<td>C-Alt-b</td><td>标注出后面的兄弟form</td>
+</tr>
+<!--t r>
+<td>C-M-d</td><td>标注到下一个form的（</td>
+</tr-->
 
 <tr>
 <td>M-k</td><td>他的作用是删除光标所在位置到parent刮号开始位置（有点饶口，自己理解)</td>
 </tr>
-<tr>
-<td>C-M-n</td><td>(☺这个经常使用) 光标标注当前form(可以理解为刮号),再按，会再标注外层的form,一直到最外层</td>
-</tr>
-
-<tr>
-<td>C-M-p</td><td>这个和C-M-n相反 ，一直到最里层</td>
-</tr>
-<tr>
-<td>C-M-f</td><td>标注出前面的兄弟form</td>
-</tr>
-<tr>
-<td>C-M-b</td><td>标注出后面的兄弟form</td>
-</tr>
-<tr>
-<td>C-M-d</td><td>标注到下一个form的（</td>
-</tr>
-<tr>
-<td>C-M-a</td><td>标注到最外层form</td>
-</tr>
-
 </table>
 
 ## 遇到的错误和问题 ##
