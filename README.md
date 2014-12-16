@@ -123,10 +123,10 @@ $ lein libdir
 </code></pre>
 
 <br/>
-<b>编辑clojure/lisp语言的一些使用快捷键</b>
+<b>编辑clojure/lisp (emacs/paredit)语言的一些使用快捷键</b>
 <table>
 <tr>
-<td>C-k</td><td>剪切当前刮号内的东西(先把光标定位的刮号开始位置)</td>
+<td style="width:70px">C-k</td><td>剪切当前刮号内的东西(先把光标定位的刮号开始位置)</td>
 </tr>
 <tr>
 <td>C-k-y</td><td>复制当前刮号内的东西</td>
