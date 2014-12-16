@@ -126,7 +126,7 @@ $ lein libdir
 <b>编辑clojure/lisp (emacs/paredit)语言的一些使用快捷键</b>
 <table>
 <tr>
-<td style="width:70px">C-k</td><td>剪切当前刮号内的东西(先把光标定位的刮号开始位置)</td>
+<td >C-k</td><td>剪切当前刮号内的东西(先把光标定位的刮号开始位置)</td>
 </tr>
 <tr>
 <td>C-k-y</td><td>复制当前刮号内的东西</td>
@@ -136,7 +136,7 @@ $ lein libdir
 </tr>
 
 <tr>
-<td>C-M-n</td><td>(☺这个经常使用) 光标标注当前form(可以理解为刮号),再按，会再标注外层的form,一直到最外层, 记法 ：No money ,get out.</td>
+<td>C-M-n</td><td>(☺这个经常使用) 光标标注当前form(可以理解为刮号),<br/> 再按，会再标注外层的form,一直到最外层, 记法 ：No money ,get out.</td>
 </tr>
 
 <tr>
