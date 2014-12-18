@@ -132,6 +132,10 @@ $ lein libdir
 <td>C-k-y</td><td>复制当前刮号内的东西</td>
 </tr>
 <tr>
+<td> S-C left/right
+</td><td>当前的form 的挂号包含或是推出后面的元素</td>
+</tr>
+<tr>
 <td>C-M-a</td><td>(☺这个经常使用)标注到最外层form</td>
 </tr>
 
