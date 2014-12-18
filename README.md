@@ -4,7 +4,7 @@
 [使用小列子，snacks](https://github.com/malakaw/my_clojure_study/blob/master/snacks.md)
 
 ## 宏 ##
-不说废话，直接看代码☺
+不说废话，直接看代码☺;生成代码的代码，我的理解。注意不要任意使用宏，要在函数无法实现的情况下使用宏，其实这种情况在clojure下很多的。
 <pre><code>
 (defmacro debug [x]
   `(+ 1 ~x (+ 9 ~x) ~'y)
