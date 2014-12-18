@@ -4,16 +4,9 @@
 [使用小列子，snacks](https://github.com/malakaw/my_clojure_study/blob/master/snacks.md)
 
 ## 宏 ##
-不说废话，直接看代码☺;生成代码的代码，我的理解。注意不要任意使用宏，要在函数无法实现的情况下使用宏，其实这种情况在clojure下很多的。
-<pre><code>
-(defmacro debug [x]
-  `(+ 1 ~x (+ 9 ~x) ~'y)
-  )
-(let [y 9] (debug 3))
-返回： 25
-</code></pre>
+[宏使用](https://github.com/malakaw/my_clojure_study/blob/master/macro_clj.md)
 
-## clojure的 quote  `' 符号 ##
+## clojure的 quote  `' 符号 (理解宏的必备知识点) ##
 自己的理解，通俗点，容易记住
 clojure 有很多的符号，让像我这种java程序员很莫名，首先还是说下quote,这分两种
 一种是  ' ，另外一个是 ｀ ，看上去差不多，其实功能也差不多。
