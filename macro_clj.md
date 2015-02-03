@@ -42,30 +42,30 @@
 
 定义宏
 <pre><code>
-(defmacro paramsProcess []
-  `[
-   ~'(parse-int  (get (-> req :params) "in_page_id"))
-   ~'(get (-> req :params) "in_page_des")
-   ~'(get (-> req :params) "in_page_method")
-   ~'(parse-int  (get (-> req :params) "in_page_type"))
-   ~'(parse-int  (get (-> req :params) "in_page_deleted"))
-   ]
+(defmacro db_client [sql_ result_commands_]
+  `(do
+     (info (~sql_  configmy))
+     (j/query  (db-connection)
+                      [
+                       (let [sql# (~sql_  configmy)]
+                         sql#
+                         )
+                       ]
+                      :row-fn   ~@result_commands_
+                      )
+     )
   )
+
 </code></pre>
 
 使用宏
 <pre><code>
-(defn  addpage_api   [req]
-  (info req)
-  (conj returnJSON {:body (format  returnCallBack (json/write-str
-                                                   (if-let [
-                                                            [page_id description method type is_deleted]
-                                                            (paramsProcess)
-                                                            ]
-                                                     {:oper (dbclient/addPage page_id description method type is_deleted)}
-                                                     {:oper "fail"}
-                                                     )
-                                                   ))})
-)
+(defn #^{:tag clojure.lang.LazySeq}  getindex_old_boost []
+     (try
+            (db_client  ':sql_get_old_index_boost  (#(hash-map "field_name"  (:field_name %)     "boost"  (:boost %)  )))
+            (catch Exception e
+              (error (.getMessage e)))
+            )
+ )
 
 </code></pre>
