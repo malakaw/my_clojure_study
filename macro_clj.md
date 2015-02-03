@@ -11,25 +11,21 @@
 
 再详细说下
 <pre><code>
-(defn  addpage_api   [req]
-  (info req)
-  (conj returnJSON {:body (format  returnCallBack (json/write-str
-                                                   (if-let [
-                                                            [page_id description method type is_deleted]
-                                                            [
-                                                             (parse-int  (get (-> req :params) "in_page_id"))
-                                                             (get (-> req :params) "in_page_des")
-                                                             (get (-> req :params) "in_page_method")
-                                                             (parse-int  (get (-> req :params) "in_page_type"))
-                                                             (parse-int  (get (-> req :params) "in_page_deleted"))
-                                                             ]
-                                                            ]
-
-                                                     (vec  (dbclient/addPage page_id description method type is_deleted))
-                                                     []
-                                                     )
-                                                   ))})
-)
+(defn  getindex_old_boost []
+ (try
+            (j/query  (db-connection)
+                      [
+                       (let [sql (:sql_get_old_index_boost  configmy)]
+                         (println  sql)
+                         sql
+                         )
+                       ]
+                      :row-fn #(hash-map "field_name"  (:field_name %)     "boost"  (:boost %)  )
+                      )
+            (catch Exception e
+              (error (.getMessage e)))
+            )
+ )
 </code></pre>
 
 在处理request接收参数这块可以说是在同一page模块中基本都是一样的，这么一大块东西，好多地方要调用，写个函数调用吧；可以；但是还有更好的办法，用宏。
