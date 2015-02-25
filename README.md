@@ -162,5 +162,4 @@ M-x nrepl-enable-on-existing-buffers should fix it.
 
 
 ## 有待解决的的问题 ##
-1）在emacs live中没有一个 变量在多文件中的替换，查找可以用 Helm<br/>
-2) 没有像是代码行对应的todo list (类似eclipse中  tasks ),似乎helm就可以搞定。。。。。但是不是整个project 的，是所有打开的buffer中。自己写elisp??
+1) 没有像是代码行对应的todo list (类似eclipse中  tasks ),似乎helm就可以搞定。。。。。但是不是整个project 的，是所有打开的buffer中。自己写elisp??
