@@ -133,7 +133,10 @@ $ lein libdir
 </tr>
 
 <tr>
-<td>C-M-n</td><td>(☺这个经常使用) 光标标注当前form(可以理解为刮号),<br/> 再按，会再标注外层的form,一直到最外层, 记法 ：No money ,get out.</td>
+<td>C-M-u</td><td>(☺这个经常使用)  光标标注当前form(可以理解为刮号,光标停留在前面的挂号),<br/> 再按，会再标注外层的form,一直到最外层, 记法 ：No money ,get out.</td>
+</tr>
+<tr>
+<td>C-M-n</td><td>(☺这个经常使用)  光标标注当前form(可以理解为刮号,光标停留在后面的挂号),<br/> 再按，会再标注外层的form,一直到最外层, 记法 ：No money ,get out.</td>
 </tr>
 
 <tr>
