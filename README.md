@@ -125,6 +125,11 @@ $ lein libdir
 <td>C-k-y</td><td>复制当前刮号内的东西</td>
 </tr>
 <tr>
+<td> M-e
+</td><td> 当前的 form的最外层，光标在结尾处 </td>
+</tr>
+
+<tr>
 <td> S-C left/right
 </td><td>当前的form 的挂号包含或是推出后面的元素</td>
 </tr>
